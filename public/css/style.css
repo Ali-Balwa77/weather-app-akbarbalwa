@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+:root{
+    --main-bg: #375266;
+    --main-color: #055291;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+html{
+    font-size: 62.5%;
+}
+.icon{
+    background: #375266; 
+    cursor: pointer;
+    text-align: right;
+    font-size: 2rem;
+    padding: 0 0.8rem 0.2rem 0.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none !important;
+    display: none;
+}
+.icon .fa{
+    color: white;
+    font-size: 1.8rem;
+}
+.main_menu{
+    background-color: var(--main-bg);
+}
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.navbar li{
+    margin-left: 2rem;
+}
+.navbar a:hover{
+    color: #009ad8;
+}
+.navbar-toggler{
+    background-color: gray;
+}
+.far{
+    color: var(--main-color);
+    animation: rot 2s linear infinite;
+}                                    
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}     
+/* main header */
+.main_header_left{
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main_header_left h1{
+    font-size: 3rem ;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+.main_header_left p{
+    font-size: 2rem;
+}
+.main_header_left span{
+    color: var(--main-color);
+}
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 0.7rem 1rem 0.7rem;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+    outline: none;
+}
+.main_header_left button:hover{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.main_header_right{
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.img{
+    margin: auto;
+}
+/* temp input field style */
+.text{
+    width: 60%;
+    position: relative;
+    margin: 10rem auto 6rem;
+}
+.text input[type="text"]{
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    background: #1e202b;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+}
+::placeholder{
+    color: #bfc1c8;
+}
+.text input[type="submit"]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #009ad8;
+    padding: 0 3rem;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+}
+.text input[type="submit"]:hover{
+    color: #009ad8;
+    background-color: #fff;
+}
+/* temp details show hear */
+.main_part{
+    width: 35rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    font-family: 'Roboto',sans-serif;
+}
+.main_top{
+    width: 100%;
+    height: 20%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+.main_top p{
+    color: #fff;
+    font-weight: 300;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+.maininfo{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.maininfo #temp_city{
+    padding: 2rem 2rem 2rem 2rem;
+    color: #bfc1cb;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.maintemp{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+.maintemp p,
+.maintemp .fa{
+    font-size: 5rem;
+    font-weight: 600;
+}
+.fa{
+    color: #009ad8;
+}
+sup{
+    font-size: 4rem;
+    margin-top: -2rem;
+}
+.data_hide{ 
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+/* errpage style */
+.errimg{
+    width: 35rem;
+    height: 30rem;
+}
+/* footer */
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+footer p{
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    text-transform: capitalize;
+}
+
+/* resposive */
+@media (max-width: 768px){
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+    }
+    .main_part{
+        width: auto;
+    }
+    .text{
+        width: auto;
+    }
+    .icon{
+        display: block;
+    }
+    .img{
+        margin-bottom: 3rem;
+    }
+    .main_part{
+        margin-bottom: 3rem;
+    }
+}
+
+
