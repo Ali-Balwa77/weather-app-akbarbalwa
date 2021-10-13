@@ -6,13 +6,14 @@ const temp_status = document.getElementById('temp_status');
 const datahide = document.querySelector('.data_hide');
 
 
-const getinfo = async(event)=>{
-    event.preventDefault();
+const getinfo = async(eveent)=>{
+    eveent.preventDefault();
     cityval = city_name.value;
     if(cityval === ''){
         temp_city.innerText = 'Plz enter your city name';
         datahide.classList.add('data_hide');
     }else{
+        try{
             let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=88ad90172d5def5922c5786162e4c669`
             const response = await fetch(url);
             const data = await response.json();
@@ -41,15 +42,13 @@ const getinfo = async(event)=>{
                 '<i class="fas fa-sun" style="color: #eccc86;"></i>';
                 console.log(tempmod);
             }
-            datahide.classList.remove('data_hide')
+            datahide.classList.remove('data_hide');
 
-        
-        .catch(()=>{
+        }catch{
             temp_city.innerText = 'Plz Enter the City Name Properly';
             datahide.classList.add('data_hide');
-        })
+        }
     }
 }
-
 
 submitbtn.addEventListener('click',getinfo);
