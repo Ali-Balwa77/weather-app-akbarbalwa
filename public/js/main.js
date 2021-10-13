@@ -6,8 +6,8 @@ const temp_status = document.getElementById('temp_status');
 const datahide = document.querySelector('.data_hide');
 
 
-const getinfo = async(eveent)=>{
-    eveent.preventDefault();
+const getinfo = async(event)=>{
+    event.preventDefault();
     cityval = city_name.value;
     if(cityval === ''){
         temp_city.innerText = 'Plz enter your city name';
